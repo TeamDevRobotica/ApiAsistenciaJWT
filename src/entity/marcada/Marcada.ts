@@ -13,7 +13,13 @@ export class Marcada extends Identidad {
     hora: string;
 
     @Column()
-    geolocalizacion: string
+    geolocalizacion: string;
+
+    @Column("varchar", {
+        length: 455,
+        nullable: true
+    })
+    observacion: string;
 
     @ManyToOne(type => Asistencia, asistencia => asistencia.marcadas)
     asistencia: Asistencia;

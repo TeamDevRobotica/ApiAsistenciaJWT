@@ -1,6 +1,5 @@
 import { Identidad } from "../comun/Identidad";
-import { Entity, Column, OneToMany, ManyToOne, BeforeInsert } from "typeorm";
-import { DateUtils } from "../../util/DateUtils";
+import { Entity, Column, OneToMany, ManyToOne } from "typeorm";
 import { Marcada } from "../marcada/Marcada";
 import { Usuario } from "../Usuario";
 
