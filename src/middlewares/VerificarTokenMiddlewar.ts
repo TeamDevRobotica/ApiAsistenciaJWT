@@ -8,7 +8,7 @@ export class VerificarTokenMiddleWar {
 
         //console.log(req.headers);
         const token = <string>req.headers['authorization'];
-        console.log(token);
+        //console.log(token);
 
         // jwt.decode(token)[req.headers["Authorization"]] as string;
         // console.log(token);

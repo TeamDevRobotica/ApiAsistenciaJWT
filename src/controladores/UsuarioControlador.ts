@@ -14,27 +14,6 @@ export class UsuarioControlador {
         return this.usuarioRepository.find({ relations: ['rol'] });
     }
 
-    @Get("/prueba")
-    //@UseBefore(PruebaMiddlewar)
-    async devolviendo() {
-
-        let usuario = await this.usuarioRepository.findOne(1)
-            .then(
-                resolve => {
-                    console.log(resolve);
-                    return resolve;
-                }, reject => {
-                    console.log(reject);
-                    setTimeout(() => { this.devolviendo() }, 1000);
-                });
-        // console.log("Hola ");
-
-
-        return usuario;
-        //return a;
-
-    }
-
     @Get("/usuarios/:id")
     getOne(@Param("id") id: number) {
         return this.usuarioRepository.findOne(id, { relations: ['rol'] });

@@ -54,7 +54,7 @@ export class AsistenciaControlador {
             }
         });
 
-        console.log(asistencia);
+        // console.log(asistencia);
         return asistencia;
     }
 

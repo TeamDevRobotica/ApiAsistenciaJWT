@@ -30,12 +30,12 @@ export class TokenControlador {
     */
     static controlarToken(token: string, res: Response) {
         let jwtPayload;
-        console.log(token);
+        //console.log(token);
         //Try to validate the token and get data
         try {
             jwtPayload = <any>jwt.verify(token, config.jwtSecret);
             res.locals.jwtPayload = jwtPayload;
-            console.log(jwtPayload);
+            //console.log(jwtPayload);
         } catch (error) {
             //If token is not valid, respond with 401 (unauthorized)
             throw new Error(res.status(401).send(error));

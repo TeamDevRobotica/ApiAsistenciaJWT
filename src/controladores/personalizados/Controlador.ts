@@ -21,7 +21,7 @@ export class Controlador {
     * @param clae  clave de usuario(string).
     */
     devolverUsuarioPorUsuarioYClave(nombreUsuario: string, clave: String) {
-        console.log('Nombre' + nombreUsuario + ' clave' + clave);
+        // console.log('Nombre' + nombreUsuario + ' clave' + clave);
 
         let usuario = this.usuarioRepository.findOneOrFail({
             relations: ["rol"],
@@ -35,7 +35,7 @@ export class Controlador {
 
 
     hayAsistenciaHoy(fecha: string, idUsuario: number) {
-        console.log('fecha ' + fecha + 'idUsuario ' + idUsuario);
+        // console.log('fecha ' + fecha + 'idUsuario ' + idUsuario);
         let asistencia = this.asistenciaRepositorio.findOneOrFail({
             relations: ["marcadas"],
             where: {
