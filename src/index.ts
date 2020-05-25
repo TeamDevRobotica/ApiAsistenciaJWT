@@ -22,5 +22,5 @@ useExpressServer(app, {
 });
 
 createConnection();
-app.listen(52000);
+app.listen(50000);
 console.log("Express server corriendo en puerto 50000. ");
